@@ -8,22 +8,23 @@ describe Rabbits do
   end
 
   describe '.reproduction' do
-    let(:number_of_months) {0}
-    it { expect(subject).to eq(0) }
+    let(:number_of_months) { 0 }
+    it { is_expected.to eq(0) }
   end
 
   describe '.reproduction' do
-    let(:number_of_months) {7}
-    it { expect(subject).to eq(13) }
+    let(:number_of_months) { 7 }
+    it { is_expected.to eq(13) }
   end
 
   describe '.reproduction' do
-    let(:number_of_months) {2}
-    it { expect(subject).to eq(1) }
+    let(:number_of_months) { 2 }
+    it { is_expected.to eq(1) }
   end
   
   describe '.reproduction' do
-    let(:number_of_months) {11}
-    it { expect(subject).to eq(89) }
+    let(:number_of_months) { 11 }
+    it { is_expected.to eq(89) }
   end
 end
+
