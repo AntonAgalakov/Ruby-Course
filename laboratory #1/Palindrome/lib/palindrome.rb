@@ -1,5 +1,5 @@
 class Palindrome
-  def self.is_palindrome(value)
+  def self.check(value)
     value == value.reverse
   end
 end
