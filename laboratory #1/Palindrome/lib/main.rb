@@ -1,4 +1,4 @@
 require './palindrome.rb'
-value = gets.chomp
 
-puts Palindrome.check(value)
+value = gets.chomp
+puts Palindrome.check?(value)

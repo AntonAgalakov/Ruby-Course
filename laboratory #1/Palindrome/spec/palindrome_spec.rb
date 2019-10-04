@@ -2,34 +2,24 @@ require "../lib/palindrome.rb"
 require 'rspec'
  
 describe Palindrome do
+  describe '.check?' do
+    subject do
+      Palindrome.check?(value)
+    end
 
-  subject do
-    Palindrome.check(value)
+    context 'when a value is a palindrom' do
+      let(:value) { "aga" }
+      it { is_expected.to eq(true) }
+    end
+
+    context 'when a value is a palindrom' do
+      let(:value) { "qwertrewq" }
+      it { is_expected.to eq(true) }
+    end
+    
+    context 'when a value is not a palindrom' do
+      let(:value) { "qwerty" }
+      it { is_expected.to eq(false) }
+    end
   end
-
-  describe '.check' do
-    let(:value) { "aga" }
-    it { is_expected.to eq(true) }
-  end
-
-  describe '.check' do
-    let(:value) { "gg" }
-    it { is_expected.to eq(true) }
-  end
-
-  describe '.check' do
-    let(:value) { "Nastuha" }
-    it { is_expected.to eq(false) }
-  end
-
-  describe '.check' do
-    let(:value) { "qwerty" }
-    it { is_expected.to eq(false) }
-  end
-
-  describe '.check' do
-    let(:value) { "" }
-    it { is_expected.to eq(true) }
-  end
-
 end
